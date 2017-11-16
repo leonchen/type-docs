@@ -1,0 +1,29 @@
+{
+  "name": "type-docs",
+  "version": "0.0.1",
+  "description": "generate your markdown docs automatically from comments in code",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf lib/* && tsc -p tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonchen/type-docs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leonchen/type-docs/issues"
+  },
+  "homepage": "https://github.com/leonchen/type-docs#readme",
+  "dependencies": {
+    "yargs": "^10.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.52",
+    "@types/yargs": "^8.0.2",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.6.1"
+  }
+}
