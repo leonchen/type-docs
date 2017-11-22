@@ -29,7 +29,7 @@ const doc: any = {};
 function scan(file: string): any[] {
   return (
     fs
-      .readFileSync(path.join(args.dir, file))
+      .readFileSync(file)
       .toString()
       .match(DEFINITION_REGEXP) || []
   );
@@ -46,7 +46,23 @@ function parseDoc(str: string) {
   }
 }
 
-const files = fs.readdirSync(args.dir);
+function getFiles(dir: string): string[] {
+  let list: string[] = [];
+  const files = fs.readdirSync(dir);
+
+  files.forEach(function(file) {
+    const stats = fs.lstatSync(path.join(dir, file));
+    if (stats.isDirectory()) {
+      list = list.concat(getFiles(path.join(dir, file)));
+    } else {
+      list.push(path.join(dir, file));
+    }
+  });
+
+  return list;
+}
+
+const files = getFiles(args.dir);
 const template = fs.readFileSync(args.template).toString();
 
 for (const file of files) {

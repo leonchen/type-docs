@@ -1,4 +1,4 @@
-import { PlayerPosition } from './player';
+import { PlayerPosition } from '../player';
 
 // @docstart api/players/update
 export type UpdateOption = {
