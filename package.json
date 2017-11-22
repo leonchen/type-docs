@@ -1,6 +1,6 @@
 {
   "name": "type-docs",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "generate your markdown docs automatically from comments in code",
   "main": "index.js",
   "scripts": {
