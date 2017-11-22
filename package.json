@@ -4,9 +4,11 @@
   "description": "generate your markdown docs automatically from comments in code",
   "main": "index.js",
   "scripts": {
+    "samples": "ts-node src/index.ts -d src/samples -t src/samples/SAMPLE.t.md -o SAMPLES.md",
     "build": "rm -rf lib/* && tsc -p tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": "./bin/type-docs",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leonchen/type-docs.git"
