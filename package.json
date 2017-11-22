@@ -1,6 +1,6 @@
 {
   "name": "type-docs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "generate your markdown docs automatically from comments in code",
   "main": "index.js",
   "scripts": {
@@ -13,8 +13,8 @@
     "type": "git",
     "url": "git+https://github.com/leonchen/type-docs.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "leonhart.chen@gmail.com",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/leonchen/type-docs/issues"
   },
